@@ -1,86 +1,52 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 255 100% 100%;
-    --foreground: 240 10% 15%;
-
+    --background: 250 98% 98%;
+    --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 15%;
-
+    --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 15%;
-
-    --primary: 256 53% 50%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 260 40% 96%;
-    --secondary-foreground: 256 53% 50%;
-
-    --muted: 260 40% 96%;
-    --muted-foreground: 240 5% 50%;
-
-    --accent: 256 75% 76%;
-    --accent-foreground: 240 10% 15%;
-
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 260 61% 52%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 260 46% 95%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 260 67% 75%;
+    --accent-foreground: 240 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 256 15% 85%;
-    --input: 256 15% 85%;
-    --ring: 256 53% 50%;
-
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
     --radius: 0.75rem;
-
-    --sidebar-background: 260 40% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 256 53% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 256 75% 76%;
-    --sidebar-accent-foreground: 240 10% 15%;
-    --sidebar-border: 256 15% 85%;
-    --sidebar-ring: 256 53% 50%;
   }
-
+ 
   .dark {
-    --background: 240 10% 10%;
-    --foreground: 0 0% 95%;
-
-    --card: 240 10% 12%;
-    --card-foreground: 0 0% 95%;
-
-    --popover: 240 10% 12%;
-    --popover-foreground: 0 0% 95%;
-
-    --primary: 256 53% 50%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 240 5% 20%;
-    --secondary-foreground: 0 0% 95%;
-
-    --muted: 240 5% 20%;
-    --muted-foreground: 240 5% 65%;
-
-    --accent: 256 75% 76%;
-    --accent-foreground: 240 10% 10%;
-
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 260 61% 52%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 95%;
-
-    --border: 240 5% 25%;
-    --input: 240 5% 25%;
-    --ring: 256 53% 50%;
-
-    --sidebar-background: 240 10% 12%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 256 53% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 256 75% 76%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 240 5% 25%;
-    --sidebar-ring: 256 53% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
   }
 }
 
@@ -88,85 +54,45 @@
   * {
     @apply border-border;
   }
-
   body {
-    @apply bg-nezabudka-bg text-foreground;
+    @apply bg-background text-foreground;
   }
 }
 
 @layer components {
-  .butterfly-wing {
-    clip-path: path('M15,0 C20,10 25,15 40,20 C25,25 20,30 15,40 C10,30 5,25 0,20 C5,15 10,10 15,0 Z');
-  }
-  
-  /* Стиль меню из листвы */
   .leaves-menu {
-    background-color: #38A169; /* Зеленый цвет листвы */
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(92, 170, 92);
     background-image: 
-      radial-gradient(circle at 20% 50%, #4ADE80 10px, transparent 10px),
-      radial-gradient(circle at 40% 20%, #4ADE80 8px, transparent 8px),
-      radial-gradient(circle at 60% 30%, #4ADE80 12px, transparent 12px),
-      radial-gradient(circle at 80% 60%, #4ADE80 6px, transparent 6px);
+      radial-gradient(circle at 20% 50%, rgba(124, 200, 124, 0.6) 5%, transparent 20%),
+      radial-gradient(circle at 70% 30%, rgba(124, 200, 124, 0.6) 5%, transparent 20%),
+      radial-gradient(circle at 40% 70%, rgba(124, 200, 124, 0.8) 6%, transparent 25%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
-  
-  .leaves-menu::before,
-  .leaves-menu::after {
-    content: '';
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background-color: #38A169;
-    border-radius: 50%;
-  }
-  
-  .leaves-menu::before {
-    top: -5px;
-    left: 30%;
-  }
-  
-  .leaves-menu::after {
-    top: -8px;
-    right: 35%;
-  }
-  
-  .leaf-item {
-    position: relative;
-    font-weight: 500;
-    padding: 0.5rem 0.75rem;
-    z-index: 2;
-  }
-  
-  .leaf-item::before {
-    content: '';
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background-color: #2F855A;
-    border-radius: 50%;
-    left: -5px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: -1;
-  }
-  
-  /* Анимация для бабочек возле меню */
+
   .butterfly-hover-left {
     animation: butterfly-hover-left 4s ease-in-out infinite;
   }
-  
+
   .butterfly-hover-right {
     animation: butterfly-hover-right 4s ease-in-out infinite;
   }
-  
+
   @keyframes butterfly-hover-left {
-    0%, 100% { transform: translateX(0) rotate(-5deg); }
-    50% { transform: translateX(-8px) rotate(5deg); }
+    0%, 100% { transform: translateX(0) translateY(0) rotate(-5deg); }
+    50% { transform: translateX(-5px) translateY(-3px) rotate(0deg); }
   }
-  
+
   @keyframes butterfly-hover-right {
-    0%, 100% { transform: translateX(0) rotate(5deg); }
-    50% { transform: translateX(8px) rotate(-5deg); }
+    0%, 100% { transform: translateX(0) translateY(0) rotate(5deg); }
+    50% { transform: translateX(5px) translateY(-3px) rotate(0deg); }
+  }
+
+  .leaf-item {
+    position: relative;
+    transition: all 0.3s;
+  }
+
+  .leaf-item:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
   }
 }
