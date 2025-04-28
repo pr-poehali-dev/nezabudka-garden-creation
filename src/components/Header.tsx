@@ -16,50 +16,65 @@ const Header: React.FC = () => {
             </div>
           </Link>
           
-          <NavigationMenu className="hidden md:flex">
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link 
-                    to="/" 
-                    className="px-3 py-2 text-nezabudka-dark hover:text-nezabudka-accent transition-colors"
-                  >
-                    Главная
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link 
-                    to="/about" 
-                    className="px-3 py-2 text-nezabudka-dark hover:text-nezabudka-accent transition-colors"
-                  >
-                    О нас
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link 
-                    to="/services" 
-                    className="px-3 py-2 text-nezabudka-dark hover:text-nezabudka-accent transition-colors"
-                  >
-                    Услуги
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link 
-                    to="/contacts" 
-                    className="px-3 py-2 text-nezabudka-dark hover:text-nezabudka-accent transition-colors"
-                  >
-                    Контакты
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+          <div className="hidden md:block relative">
+            <div className="leaves-menu px-8 py-3 rounded-full relative">
+              {/* Левая бабочка */}
+              <div className="absolute -left-6 top-1/2 -translate-y-1/2">
+                <Butterfly size="md" color="#6E59A5" className="butterfly-hover-left" />
+              </div>
+              
+              {/* Правая бабочка */}
+              <div className="absolute -right-6 top-1/2 -translate-y-1/2">
+                <Butterfly size="md" color="#6E59A5" className="butterfly-hover-right" />
+              </div>
+              
+              {/* Навигационное меню в виде листвы */}
+              <NavigationMenu>
+                <NavigationMenuList className="flex gap-6">
+                  <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                      <Link 
+                        to="/" 
+                        className="leaf-item text-white hover:text-nezabudka-light transition-colors"
+                      >
+                        Главная
+                      </Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                      <Link 
+                        to="/about" 
+                        className="leaf-item text-white hover:text-nezabudka-light transition-colors"
+                      >
+                        О нас
+                      </Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                      <Link 
+                        to="/services" 
+                        className="leaf-item text-white hover:text-nezabudka-light transition-colors"
+                      >
+                        Услуги
+                      </Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                      <Link 
+                        to="/contacts" 
+                        className="leaf-item text-white hover:text-nezabudka-light transition-colors"
+                      >
+                        Контакты
+                      </Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+            </div>
+          </div>
           
           <div className="md:hidden">
             {/* Mobile menu button would go here */}

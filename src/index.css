@@ -98,4 +98,75 @@
   .butterfly-wing {
     clip-path: path('M15,0 C20,10 25,15 40,20 C25,25 20,30 15,40 C10,30 5,25 0,20 C5,15 10,10 15,0 Z');
   }
+  
+  /* Стиль меню из листвы */
+  .leaves-menu {
+    background-color: #38A169; /* Зеленый цвет листвы */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: 
+      radial-gradient(circle at 20% 50%, #4ADE80 10px, transparent 10px),
+      radial-gradient(circle at 40% 20%, #4ADE80 8px, transparent 8px),
+      radial-gradient(circle at 60% 30%, #4ADE80 12px, transparent 12px),
+      radial-gradient(circle at 80% 60%, #4ADE80 6px, transparent 6px);
+  }
+  
+  .leaves-menu::before,
+  .leaves-menu::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: #38A169;
+    border-radius: 50%;
+  }
+  
+  .leaves-menu::before {
+    top: -5px;
+    left: 30%;
+  }
+  
+  .leaves-menu::after {
+    top: -8px;
+    right: 35%;
+  }
+  
+  .leaf-item {
+    position: relative;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    z-index: 2;
+  }
+  
+  .leaf-item::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #2F855A;
+    border-radius: 50%;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+  
+  /* Анимация для бабочек возле меню */
+  .butterfly-hover-left {
+    animation: butterfly-hover-left 4s ease-in-out infinite;
+  }
+  
+  .butterfly-hover-right {
+    animation: butterfly-hover-right 4s ease-in-out infinite;
+  }
+  
+  @keyframes butterfly-hover-left {
+    0%, 100% { transform: translateX(0) rotate(-5deg); }
+    50% { transform: translateX(-8px) rotate(5deg); }
+  }
+  
+  @keyframes butterfly-hover-right {
+    0%, 100% { transform: translateX(0) rotate(5deg); }
+    50% { transform: translateX(8px) rotate(-5deg); }
+  }
 }
